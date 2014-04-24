@@ -1,0 +1,58 @@
+Source: haskell-bindings-libusb
+Section: haskell
+Priority: extra
+Maintainer: Joonas Javanainen <joonas.javanainen@gmail.com>
+Build-Depends: debhelper (>= 9)
+  , cdbs
+  , haskell-devscripts (>= 0.8)
+  , ghc
+  , ghc-prof
+  , libghc-bindings-dsl-dev (>= 1.0.15)
+  , libusb-1.0-0-dev (>= 1.0.5)
+  , pkg-config
+Build-Depends-Indep: ghc-doc
+Standards-Version: 3.9.4
+Homepage: http://hackage.haskell.org/package/bindings-libusb
+
+Package: libghc-bindings-libusb-dev
+Architecture: any
+Depends: ${haskell:Depends}
+  , ${shlibs:Depends}
+  , ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: Low level Haskell bindings to libusb-1.*
+ For a higher-level and more Haskell friendly binding (which uses this package)
+ see the libghc-usb package.
+ .
+ This package provides a library for the Haskell programming language.
+ See http://www.haskell.org/ for more information on Haskell.
+
+Package: libghc-bindings-libusb-prof
+Architecture: any
+Depends: ${haskell:Depends}
+  , ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: Low level Haskell bindings to libusb-1.*; profiling libraries
+ For a higher-level and more Haskell friendly binding (which uses this package)
+ see the libghc-usb package.
+ .
+ This package provides a library for the Haskell programming language, compiled
+ for profiling.  See http://www.haskell.org/ for more information on Haskell.
+
+Package: libghc-bindings-libusb-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}, ${haskell:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Description: Low level Haskell bindings to libusb-1.*; documentation
+ For a higher-level and more Haskell friendly binding (which uses this package)
+ see the libghc-usb package.
+ .
+ This package provides the documentation for a library for the Haskell
+ programming language.
+ See http://www.haskell.org/ for more information on Haskell.
